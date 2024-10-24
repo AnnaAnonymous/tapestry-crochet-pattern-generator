@@ -11,36 +11,7 @@ https://threadcolors.com/
 from PIL import Image
 import math
 import csv
-
-name_banner = [
-    "  _____                                __                                ",
-    " () | _,       _  , _|_  ,_           / ()  ,_   _   _  |)    __|_       ",
-    "    |/ |  |/\\_|/ / \\_|  /  | |  |    |     /  | / \\_/   |/\\  |/ |        ",
-    "  (/ \\/|_/|_/ |_/ \\/ |_/   |/ \\/|/    \\___/   |/\\_/ \\__/|  |/|_/|_/      ",
-    "  , _    (|                    (|                                        ",
-    " /|/ \\ _, _|__|_  _  ,_            () | _        _  ,_   _, _|_  _   ,_  ",
-    "  |__// |  |  |  |/ /  | /|/|      /\\/||/ /|/|  |/ /  | / |  |  / \\_/  | ",
-    "  |   \\/|_/|_/|_/|_/   |/ | |_/   /(_/ |_/ | |_/|_/   |/\\/|_/|_/\\_/    |/"
-]
-
-alt_name_banner = [
-    "  _____                  _               ___             _        _      ",
-    " |_   _|_ _ _ __  ___ __| |_ _ _ _  _   / __|_ _ ___  __| |_  ___| |_    ",
-    "   | |/ _` | '_ \\/ -_|_-<  _| '_| || | | (__| '_/ _ \\/ _| ' \\/ -_)  _|   ",
-    "   |_|\\__,_| .__/\\___/__/\\__|_|  \\_, |  \\___|_| \\___/\\__|_||_\\___|\\__|   ",
-    "  ___      |_| _                 |__/_                       _           ",
-    " | _ \\__ _| |_| |_ ___ _ _ _ _    / __|___ _ _  ___ _ _ __ _| |_ ___ _ _ ",
-    " |  _/ _` |  _|  _/ -_) '_| ' \\  | (_ / -_) ' \\/ -_) '_/ _` |  _/ _ \\ '_|",
-    " |_| \\__,_|\\__|\\__\\___|_| |_||_|  \\___\\___|_||_\\___|_| \\__,_|\\__\\___/_|  "
-]
-
-color_options_menu = [
-    " 1) From specified Anchor Colors",
-    " 2) From specified DMC Colors",
-    " 3) From all Anchor Colors",
-    " 4) From all DMC Colors",
-    " 5) Manual RGB Input"
-]
+import constants as constants
 
 def translate_image(file_path: str, colors: list[tuple[int, int, int]], colormap: dict[tuple[int, int, int], str]):
     image = Image.open(file_path)
@@ -168,11 +139,11 @@ def extract_color_map_from_csv():
         file.write("}") 
 
 def main():
-    print_banner(name_banner)
+    print_banner(constants.NAME_BANNER)
     print("please enter the file path to your picture:")
     file_path = input()
     print("What colors do you want to be extracted?")
-    print_banner(color_options_menu)
+    print_banner(constants.COLOR_OPTIONS_MENU)
     color_choice = int(input())
     if color_choice == 1:
         pass
@@ -190,40 +161,6 @@ def main():
     print("Write to what file?: ", end="")
     file_path = input()
     write_pattern_to_file(pattern_count, pattern_colors, file_path)
-
-# def main():
-#     print("please enter the absolute path to your picture:")
-#     file_path = input()
-#     print("You will now be prompted for the colors in your pattern.") 
-#     print("Please enter the red value for your first color: ", end="")
-#     red = int(input())
-#     print("green: ", end="")
-#     green = int(input())
-#     print("blue: ", end="")
-#     blue = int(input())
-#     colors = [(red, green, blue)]
-#     print("what is the name of your color (must be unique): ", end="")
-#     name = input()
-#     color_map = {(red, green, blue) : name}
-#     print("Add another color? (y/n): ", end="")
-#     more_colors = input()
-#     while more_colors == "y":
-#         print("Please enter the red value for your next color: ", end="")
-#         red = int(input())
-#         print("green: ", end="")
-#         green = int(input())
-#         print("blue: ", end="")
-#         blue = int(input())
-#         colors.append((red, green, blue))
-#         print("what is the name of your color (must be unique): ", end="")
-#         name = input()
-#         color_map[(red, green, blue)] = name
-#         print("Add another color? (y/n): ", end="")
-#         more_colors = input()
-#     pattern_count, pattern_colors = translate_image(file_path, colors, color_map)
-#     print("Write to what file?: ", end="")
-#     file_path = input()
-#     write_pattern_to_file(pattern_count, pattern_colors, file_path)
 
 if __name__ == "__main__":
     main()
