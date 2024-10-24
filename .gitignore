@@ -162,5 +162,5 @@ cython_debug/
 #.idea/
 
 # Local Data
-pictures/
-gen_data/
+pattern_generator/gen_data
+pattern_generator/pictures
