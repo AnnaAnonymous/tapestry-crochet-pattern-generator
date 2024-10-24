@@ -140,25 +140,27 @@ def extract_color_map_from_csv():
 
 def main():
     print_banner(constants.NAME_BANNER)
-    print("please enter the file path to your picture:")
+    print_banner(constants.DECRIPTION)
+    print(constants.PICTURE_PROMPT)
     file_path = input()
-    print("What colors do you want to be extracted?")
+    print(constants.COLOR_PROMPT)
     print_banner(constants.COLOR_OPTIONS_MENU)
     color_choice = int(input())
+    # TODO: Fix this, why do we have colors and color map?, try to condense
     if color_choice == 1:
-        pass
+        colors, color_map = select_anchor_colors()
     elif color_choice == 2:
-        pass
+        colors, color_map = select_DMC_colors()
     elif color_choice == 3:
-        pass
+        color_map = constants.ANCHOR_COLOR_MAP
     elif color_choice == 4:
-        pass
+        color_map = constants.DMC_COLOR_MAP
     elif color_choice == 5:
         colors, color_map = select_manual_RGB_colors()
     else:
         pass
     pattern_count, pattern_colors = translate_image(file_path, colors, color_map)
-    print("Write to what file?: ", end="")
+    print(constants.FILE_PROMPT)
     file_path = input()
     write_pattern_to_file(pattern_count, pattern_colors, file_path)
 

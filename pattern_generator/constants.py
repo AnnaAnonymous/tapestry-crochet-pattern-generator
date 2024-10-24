@@ -1,4 +1,5 @@
 NAME_BANNER = [
+    "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _",
     "  _____                                __                                ",
     " () | _,       _  , _|_  ,_           / ()  ,_   _   _  |)    __|_       ",
     "    |/ |  |/\\_|/ / \\_|  /  | |  |    |     /  | / \\_/   |/\\  |/ |        ",
@@ -6,7 +7,8 @@ NAME_BANNER = [
     "  , _    (|                    (|                                        ",
     " /|/ \\ _, _|__|_  _  ,_            () | _        _  ,_   _, _|_  _   ,_  ",
     "  |__// |  |  |  |/ /  | /|/|      /\\/||/ /|/|  |/ /  | / |  |  / \\_/  | ",
-    "  |   \\/|_/|_/|_/|_/   |/ | |_/   /(_/ |_/ | |_/|_/   |/\\/|_/|_/\\_/    |/"
+    "  |   \\/|_/|_/|_/|_/   |/ | |_/   /(_/ |_/ | |_/|_/   |/\\/|_/|_/\\_/    |/",
+    "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"
 ]
 
 ALT_NAME_BANNER = [
@@ -19,6 +21,26 @@ ALT_NAME_BANNER = [
     " |  _/ _` |  _|  _/ -_) '_| ' \\  | (_ / -_) ' \\/ -_) '_/ _` |  _/ _ \\ '_|",
     " |_| \\__,_|\\__|\\__\\___|_| |_||_|  \\___\\___|_||_\\___|_| \\__,_|\\__\\___/_|  "
 ]
+
+DECRIPTION = [
+    "This program is written for the purposes of converting an image file into a tapstry crochet pattern. With this program, you can generate a written pattern, as well as a csv file with the following format:\n",
+    "5",
+    "b",
+    "1, 3, 1",
+    "w, b, w",
+    "2, 1, 2",
+    "w, b, w\n",
+    "This pattern is a simplified version of the written pattern:",
+    "Row 1: black x5",
+    "Row 2: white x1, black x3, white x1",
+    "Row 3: white x2, black x1, white x2\n",
+    "The intention of this particular layout is to make it easier to follow along and mark up larger digital patterns. You can elect not to generate the csv file, and only generate the written pattern, or vice versa.\n",
+    "Let's get started."
+]
+
+PICTURE_PROMPT = "Please enter the file path to your picture:"
+COLOR_PROMPT = "What colors do you want to be extracted?"
+FILE_PROMPT = "Please input the name of the file you'd like to write to:"
 
 COLOR_OPTIONS_MENU = [
     " 1) From specified Anchor Colors",
