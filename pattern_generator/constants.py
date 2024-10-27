@@ -1,3 +1,7 @@
+PICTURE_PROMPT = "Please enter the file path to your picture:"
+COLOR_PROMPT = "What colors do you want to be extracted?"
+FILE_PROMPT = "Please input the name of the file you'd like to write to:"
+
 NAME_BANNER = [
     "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _",
     "  _____                                __                                ",
@@ -37,10 +41,6 @@ DECRIPTION = [
     "The intention of this particular layout is to make it easier to follow along and mark up larger digital patterns. You can elect not to generate the csv file, and only generate the written pattern, or vice versa.\n",
     "Let's get started."
 ]
-
-PICTURE_PROMPT = "Please enter the file path to your picture:"
-COLOR_PROMPT = "What colors do you want to be extracted?"
-FILE_PROMPT = "Please input the name of the file you'd like to write to:"
 
 COLOR_OPTIONS_MENU = [
     " 1) From specified Anchor Colors",
