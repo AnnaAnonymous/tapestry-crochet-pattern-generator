@@ -1,6 +1,7 @@
 PICTURE_PROMPT = "Please enter the file path to your picture:"
 COLOR_PROMPT = "What colors do you want to be extracted?"
 FILE_PROMPT = "Please input the name of the file you'd like to write to:"
+INPUT_ERROR = "Invalid input, please try again."
 
 NAME_BANNER = [
     "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _",
@@ -26,20 +27,48 @@ ALT_NAME_BANNER = [
     " |_| \\__,_|\\__|\\__\\___|_| |_||_|  \\___\\___|_||_\\___|_| \\__,_|\\__\\___/_|  "
 ]
 
-DECRIPTION = [
-    "This program is written for the purposes of converting an image file into a tapstry crochet pattern. With this program, you can generate a written pattern, as well as a csv file with the following format:\n",
-    "5",
-    "b",
-    "1, 3, 1",
-    "w, b, w",
-    "2, 1, 2",
-    "w, b, w\n",
-    "This pattern is a simplified version of the written pattern:",
-    "Row 1: black x5",
-    "Row 2: white x1, black x3, white x1",
-    "Row 3: white x2, black x1, white x2\n",
-    "The intention of this particular layout is to make it easier to follow along and mark up larger digital patterns. You can elect not to generate the csv file, and only generate the written pattern, or vice versa.\n",
+# DECRIPTION = [
+#     "This program is written for the purposes of converting an image file into a tapstry crochet pattern. With this program, you can generate a written pattern, as well as a csv file with the following format:\n",
+#     "5",
+#     "b",
+#     "1, 3, 1",
+#     "w, b, w",
+#     "2, 1, 2",
+#     "w, b, w\n",
+#     "This pattern is a simplified version of the written pattern:",
+#     "Row 1: black x5",
+#     "Row 2: white x1, black x3, white x1",
+#     "Row 3: white x2, black x1, white x2\n",
+#     "The intention of this particular layout is to make it easier to follow along and mark up larger digital patterns. You can elect not to generate the csv file, and only generate the written pattern, or vice versa.\n",
+#     "Let's get started."
+# ]
+
+DESCRIPTION = [
+    "The Tapestry Crochet Pattern Generator was written for the purposes of converting patterns between formats. This program supports 3 different formats, a picture, a csv file, and a written pattern.",
+    "For clarification on any of these formats, select the relevant help option from the menu.",
     "Let's get started."
+]
+
+PICTURE_PATTERN_EXPLAINATION = [
+    "A picture pattern, as used by ths program, is simply a picture file which conatins the pixelized version of your pattern. Each pixel will represent a stitch, and the color of the pixel will represent the associated stitch color.",
+    "For example, a picture with the diminsions 10 by 20 will represent a pattern which is 10 stitches long and 20 stitches tall. If each stitch in your pattern is represented by more than one pixel, your pattern will not be properly formatted, and will be much larger than intended. If additional clarification is needed, an example picture pattern can be produced.",
+    "Would you like to generate an example picture pattern? (y/n): "
+]
+
+CSV_PATTERN_EXPLAINATION = [
+    "A csv pattern, as used  by this program is simply a csv file which contains stitch count and associated color information. 2 csv file rows will be used to represent a single pattern row. The first row will contain a series of successive numerical values, which correspond to the number of stitches to be made in a certain color. The second row will contain the color of the stitches specified in the row above.",
+    "If additional "
+]
+
+WRITTEN_PATTERN_EXPLAINATION = [
+    
+]
+
+START_MENU = [
+    " 1) Load file",
+    " 2) HELP: Picture Pattern",
+    " 3) HELP: CSV Pattern",
+    " 4) HELP: Written Pattern"
 ]
 
 COLOR_OPTIONS_MENU = [

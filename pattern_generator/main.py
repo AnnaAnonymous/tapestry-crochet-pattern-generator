@@ -79,7 +79,19 @@ def select_manual_RGB_colors():
 
 def main():
     print_banner(c.NAME_BANNER)
-    print_banner(c.DECRIPTION)
+    print_banner(c.DESCRIPTION)
+    print_banner(c.START_MENU)
+    menu_option = input()
+    while menu_option != "1":
+        if menu_option == "2":
+            pass
+        elif menu_option == "3":
+            pass
+        elif menu_option == "4":
+            pass 
+        else:
+            print(c.INPUT_ERROR)
+        print_banner(c.START_MENU)
     print(c.PICTURE_PROMPT)
     file_path = input()
     color_map = {
